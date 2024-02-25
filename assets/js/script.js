@@ -93,3 +93,5 @@ function galleryAnimation(triggerSelector, boxSelectors) {
 
 
 animateContent([".home .content h5, .home .content h1, .home .content p, .home .content .search"]);
+
+scrollTirggerAnimation(".whyus", [".whyus .box1", ".whyus .box2", ".whyus .box3"]);

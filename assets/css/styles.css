@@ -155,14 +155,14 @@ section.home {
     height: calc(100% - 65px);
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     flex-direction: column;
     transform: translate(0, -65px);
 }
 .home .home-box .content h5,
 .home .home-box .content h1,
 .home .home-box .content p {
-    text-align: center; /* Align text content to the left */
+    text-align: center;
 }
 
 .home .home-box .content h5{
@@ -238,15 +238,42 @@ section.home {
     opacity: 0;
 }
 .home .home-box .content .inner-content {
-    width: 100%; /* Occupy full width of the outer content box */
+    width: 100%; 
     display: flex;
-    justify-content: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
+    justify-content: center; 
+    align-items: center; 
     flex-direction: column;
 }
+/* --------------- why us -----------------*/
 
-.home .home-box .content .inner-content h5,
-.home .home-box .content .inner-content h1,
-.home .home-box .content .inner-content p {
-    text-align: right; /* Center text within the inner content */
+.whyus .container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+    padding:  5rem 0;
+}
+
+.whyus .container .box {
+    padding: 0 1rem;
+    text-align: center;
+    max-width: 30rem;
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
+.whyus .container .box img {
+    height: 10rem;
+}
+
+.whyus .container .box h4 {
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    margin-top: 2rem;
+    font-weight: 600;
+}
+
+.whyus .container .box p {
+    color: #666;
 }
