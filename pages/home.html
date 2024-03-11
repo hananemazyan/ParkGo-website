@@ -4,154 +4,283 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ParkGo | Find Your Spot</title>
-    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <!--reservation-->
+    <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_arrows.min.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
+    <!--reservation-->
 </head>
 <body>
-    <!-- home section starts here  -->
-    <section class="home">
-        <div class="home-box">
-            <nav>
-                <div class="logo bars">
-                    <div class="bar">
-                        <i class="fa fa-bars"></i>
-                    </div>
-                    <h3>ParkGo</h3>
+<!-- home section starts here  -->
+<section class="home" id="home">
+    <div class="home-box">
+        <nav>
+            <div class="logo bars">
+                <div class="bar">
+                    <i class="fa fa-bars"></i>
                 </div>
-                <div class="menu">
-                    <div class="close">
-                        <i class="fa fa-close"></i>
-                    </div>
-                    <ul>
-                        <li><a href="#">home</a></li>
-                        <li><a href="#">about</a></li>
-                        <li><a href="#">reservation</a></li>
-                        <li><a href="#">parking status </a></li>
-                        <li><a href="#">How it works</a></li>
-                    </ul>
+                <h3>ParkGo</h3>
+            </div>
+            <div class="menu">
+                <div class="close">
+                    <i class="fa fa-close"></i>
                 </div>
-                <div class="signup-login">
-                    <a href="#">sign up</a>
-                    <a href="#">login</a>
-                </div>
-            </nav>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#Reservation">reservation</a></li>
+                    <li><a href="#">parking status </a></li>
+                    <li><a href="#">How it works</a></li>
+                </ul>
+            </div>
+            <div class="signup-login">
+                <a href="#">sign up</a>
+                <a href="#">login</a>
+            </div>
+        </nav>
 
+        <div class="content">
+            <h5>ParkGo</h5>
+            <h1>Park Easy, Drive Happy</h1>
+            <p>Park Smart, Drive Smarter: Your Perfect Spot Awaits!</p>
+
+            <div class="search">
+                <i class="fa fa-search"></i>
+                <input type="text" placeholder="finding a place Begin with a search...">
+                <button>search</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Why us section   -->
+<section class="whyus" id="about">
+    <div class="container">
+        <div class="box box1">
+            <img src="image/security1.webp" alt="">
             <div class="content">
-                <h5>ParkGo</h5>
-                <h1>Park Easy, Drive Happy</h1>
-                <p>Park Smart, Drive Smarter: Your Perfect Spot Awaits!</p>
-
-                <div class="search">
-                    <i class="fa fa-search"></i>
-                    <input type="text" placeholder="finding a place Begin with a search...">
-                    <button>search</button>
-                </div>
+                <h4>Security</h4>
+                <p> Our parking service ensures the safety of your vehicle through advanced surveillance systems and secure access controls, providing peace of mind against theft</p>
             </div>
         </div>
-    </section>
-    <!-- Why us section   -->
-    <section class="whyus">
-        <div class="container">
-            <div class="box box1">
-                <img src="/assets/image/security1.webp" alt="">
-                <div class="content">
-                    <h4>Security</h4>
-                    <p> Our parking service ensures the safety of your vehicle through advanced surveillance systems and secure access controls, providing peace of mind against theft</p>
-                </div>
-            </div>
-            <div class="box box2">
-                <img src="/assets/image/timesaving1.webp" alt="">
-                <div class="content">
-                    <h4>Time-Saving</h4>
-                    <p>With our smart parking system, users can quickly locate and reserve parking spots in advance, saving valuable time by eliminating the need to search for parking and reducing delays in finding a suitable spot</p>
-                </div>
-            </div>
-            <div class="box box3">
-                <img src="/assets/image/moneysaving1.webp" alt="">
-                <div class="content">
-                    <h4>Cost-Effective</h4>
-                    <p>By offering transparent pricing, competitive rates, and convenient payment options, our parking service helps users save money on parking fees and avoid fines, providing an affordable and efficient parking solution</p>
-                </div>
+        <div class="box box2">
+            <img src="image/timesaving1.webp" alt="">
+            <div class="content">
+                <h4>Time-Saving</h4>
+                <p>With our smart parking system, users can quickly locate and reserve parking spots in advance, saving valuable time by eliminating the need to search for parking and reducing delays in finding a suitable spot</p>
             </div>
         </div>
-    </section>
+        <div class="box box3">
+            <img src="image/moneysaving1.webp" alt="">
+            <div class="content">
+                <h4>Cost-Effective</h4>
+                <p>By offering transparent pricing, competitive rates, and convenient payment options, our parking service helps users save money on parking fees and avoid fines, providing an affordable and efficient parking solution</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!--reservation-->
+<section class="Reservation" id="Reservation">
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-3">
+            <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#exampleModal">Book Now</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="smartwizard">
+                            <ul>
+                                <li>
+                                    <a href="#step-1">Step 1
+                                        <br />
+                                        <small>Account Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-2">Step 2
+                                        <br />
+                                        <small>Personal Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-3">Step 3
+                                        <br />
+                                        <small>Payment Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-4">Step 4
+                                        <br />
+                                        <small>Confirm Details</small>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <div id="step-1">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" class="form-control" placeholder="Confirm Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-2">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="form-control" required>
+                                                <option value="">Where do you want to park?</option>
+                                                <option value="ousis">Ousis</option>
+                                                <option value="maarif">Maarif</option>
+                                                <option value="bourgone">Bourgone</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="datetime-local" class="form-control" placeholder="Arrival Date and Time" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="datetime-local" class="form-control" placeholder="Departure Date and Time" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="License Plate Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-3" class="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Card Number" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Cardholder Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="CVV" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Mobile Phone Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-4" class="">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <span>Thank you for submitting your details to ParkGo.com. We will send you a confirmation email. We will review your details and get back to you.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript'></script>
+
+
 <!--parking status-->
 
-    <!--Feedback section -->
-    <section class="feedback">
-        <div class="container">
-            <h4 class="label">Driver's voices</h4>
-            <h2 class="heading">Driver's voices</h2>
-            <p class="paragraph">
-                real stories from our Smart Driver community
-            </p>
+<!--Feedback section -->
+<section class="feedback">
+    <div class="container">
+        <h4 class="label">Driver's voices</h4>
+        <h2 class="heading">Driver's voices</h2>
+        <p class="paragraph">
+            real stories from our Smart Driver community
+        </p>
+    </div>
+
+    <div class="voices">
+        <div class="voice box1">
+            <div class="profile">
+                <img src="photo1.jpg" alt="">
+                <div class="detail">
+                    <li>marvin davin</li>
+                    <li>Driver</li>
+                </div>
+            </div>
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
         </div>
 
-        <div class="voices">
-            <div class="voice box1">
-                <div class="profile">
-                    <img src="photo1.jpg" alt="">
-                    <div class="detail">
-                        <li>marvin davin</li>
-                        <li>Driver</li>
-                    </div>
+        <div class="voice box3">
+            <div class="profile">
+                <img src="photo3.jpg" alt="">
+                <div class="detail">
+                    <li>marvin davin</li>
+                    <li>Driver</li>
                 </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
             </div>
-
-            <div class="voice box3">
-                <div class="profile">
-                    <img src="photo3.jpg" alt="">
-                    <div class="detail">
-                        <li>marvin davin</li>
-                        <li>Driver</li>
-                    </div>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
-            </div>
-            <div class="voice box4">
-                <div class="profile">
-                    <img src="photo4.jpg" alt="">
-                    <div class="detail">
-                        <li>marvin davin</li>
-                        <li>traveler</li>
-                    </div>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
-            </div>
-            <div class="voice box5">
-                <div class="profile">
-                    <img src="photo5.jpg" alt="">
-                    <div class="detail">
-                        <li>marvin davin</li>
-                        <li>Visitor</li>
-                    </div>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
-            </div>
-            <div class="voice box6">
-                <div class="profile">
-                    <img src="photo6.jpg" alt="">
-                    <div class="detail">
-                        <li>marvin davin</li>
-                        <li>Visitor</li>
-                    </div>
-                </div>
-                <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
-            </div>
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
         </div>
-    </section>
+        <div class="voice box4">
+            <div class="profile">
+                <img src="photo4.jpg" alt="">
+                <div class="detail">
+                    <li>marvin davin</li>
+                    <li>traveler</li>
+                </div>
+            </div>
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
+        </div>
+        <div class="voice box5">
+            <div class="profile">
+                <img src="photo5.jpg" alt="">
+                <div class="detail">
+                    <li>marvin davin</li>
+                    <li>Visitor</li>
+                </div>
+            </div>
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
+        </div>
+        <div class="voice box6">
+            <div class="profile">
+                <img src="photo6.jpg" alt="">
+                <div class="detail">
+                    <li>marvin davin</li>
+                    <li>Visitor</li>
+                </div>
+            </div>
+            <p>"Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat repellat iusto sunt, ducimus aliquam laboriosam placeat eligendi, dignissimos facere ratione deserunt. Voluptatum ratione saepe dolor!"</p>
+        </div>
+    </div>
+</section>
 
-    
 
-
-
-
-    <!--Footer -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="/assets/js/script.js"></script>
+<!--Footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
