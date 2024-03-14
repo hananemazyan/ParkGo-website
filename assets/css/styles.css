@@ -69,7 +69,7 @@ section.home {
 .home .home-box nav {
     width: 100%;
     height: 65px;
-    background: linear-gradient(rgb(255,255,255,.2),rgb(255,255,255,.2));
+    background: linear-gradient(rgba(109, 29, 236, 0.2),rgba(149, 26, 225, 0.2));
     backdrop-filter: blur(1px);
     border-radius: .7rem;
     display: flex;
@@ -280,6 +280,107 @@ section.home {
 
 
 
+
+
+
+/*---------------- location ------------------*/
+
+
+
+
+.destinations {
+    width: 100%;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+}
+
+.destinations .container {
+    width: 100%;
+}
+
+.destinations .container .container-box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.destinations .container .container-box .heading {
+    max-width: 30rem;
+}
+
+.destinations .container .container-box .content {
+    max-width: 35rem;
+}
+
+.destinations .container .container-box .content p {
+    line-height: 1.7;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.destinations .container .container-box .content a {
+    color: var(--green-color);
+    font-weight: 600;
+}
+
+.destinations .container .container-box .content a i {
+    margin-left: .5rem;
+}
+
+.destinations .container .container-box .content a:hover i {
+    margin-left: .1rem;
+}
+
+.gallery {
+    margin-top: 4rem;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.gallery .box {
+    height: 23rem;
+    flex-grow: 1;
+    overflow: hidden;
+    border-radius: .8rem;
+    position: relative;
+}
+
+.gallery .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.gallery .box .text {
+    position: absolute;
+    bottom: 0;
+    padding: 1.5rem 2rem;
+    left: 0;
+    z-index: 1;
+}
+
+.gallery .box .text h2 {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    font-weight: 500;
+}
+
+.destinations .container .container-box .heading,
+.destinations .container .container-box .content {
+    transform: translate(-200px);
+    opacity: 0;
+}
+
+.destinations .gallery .box {
+    transform: translate(0, 100px);
+    opacity: 0;
+}
+
 /*---------------- feedback ------------------*/
 .feedback {
     background: url("/assets/image/section-background3.jpg");
@@ -477,4 +578,130 @@ footer .footer .copyright a {
     color: rgb(255 255 255/80%);
     margin-left: 1rem;
     text-align: center;
+}
+
+
+
+/* ----------- Responsivity ----------------*/
+
+
+@media (max-width: 1020px) {
+    html {
+        font-size: 85%;
+    }
+
+    section {
+        padding: 0 2rem;
+    }
+
+    footer .footer {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 910px) {
+
+    .home .home-box nav {
+        padding: 0 1rem;
+    }
+
+    .home .home-box nav .menu ul {
+        gap: 2rem;
+    }
+
+    .destinations .container .container-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    footer .footer .container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .heading {
+        font-size: 2rem;
+    }
+    .home .home-box nav .menu {
+        display: none;
+    }
+
+    .home .home-box nav .logo .bar {
+        display: block;
+    }
+
+    .home .home-box nav .menu.active {
+        display: block;
+        position: absolute;
+        left: -1.5rem;
+        top: -1.5rem;
+        width: 100vw;
+        height: 100vh;
+        background: rgb(0 0 0/90%);
+        display: flex;
+        align-items: center;
+        padding: 0 3rem;
+    }
+
+    .home .home-box nav .menu .close {
+        display: block;
+        position: absolute;
+        left: 3rem;
+        top: 3rem;
+        cursor: pointer;
+        color: var(--white-color);
+        font-size: 2rem;
+    }
+
+    .home .home-box nav .menu .close:hover {
+        color: rgb(255 255 255/40%);
+    }
+
+    .home .home-box nav .menu ul {
+        flex-direction: column;
+        font-size: 1.3rem;
+        gap: 1rem;
+    }
+
+    .home .home-box nav .menu ul:hover li a {
+        color: rgb(255 255 255/40%);
+    }
+
+    .home .home-box nav .menu ul li a:hover {
+        color: var(--white-color);
+    }
+
+    .home .home-box .content {
+        padding: 2rem;
+    }
+
+    .travel .container {
+        flex-direction: column;
+        padding: 4rem 0;
+        gap: 4rem;
+    }
+
+    .travel .container .box img {
+        height: 6rem;
+    }
+
+    .destinations .container .container-box .content {
+        font-size: .8rem;
+    }
+
+    .feedback .container p {
+        font-size: .9rem;
+    }
+}
+
+@media (max-width: 607px) {
+    .home .home-box .content h1 {
+        font-size: 2rem;
+    }
+
+    .home .home-box .content p {
+        font-size: .8rem;
+    }
 }

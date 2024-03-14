@@ -32,7 +32,7 @@
                 </div>
                 <div class="signup-login">
                     <a href="#">sign up</a>
-                    <a href="#">login</a>
+                    <a href="/pages/login.html">login</a>
                 </div>
             </nav>
 
@@ -77,7 +77,178 @@
     </section>
 
 <!--reservation-->
+<!--reservation-->
+<section class="Reservation" id="Reservation">
+    <div class="container">
+        <div class="row d-flex justify-content-center mt-3">
+            <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#exampleModal">Book Now</button>
+        </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="smartwizard">
+                            <ul>
+                                <li>
+                                    <a href="#step-1">Step 1
+                                        <br />
+                                        <small>Account Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-2">Step 2
+                                        <br />
+                                        <small>Personal Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-3">Step 3
+                                        <br />
+                                        <small>Payment Information</small>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#step-4">Step 4
+                                        <br />
+                                        <small>Confirm Details</small>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="mt-4">
+                                <div id="step-1">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Name" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="form-control" placeholder="Email" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="password" class="form-control" placeholder="Password" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" class="form-control" placeholder="Confirm Password" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-2">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <select class="form-control" required>
+                                                <option value="">Where do you want to park?</option>
+                                                <option value="ousis">Ousis</option>
+                                                <option value="maarif">Maarif</option>
+                                                <option value="bourgone">Bourgone</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="datetime-local" class="form-control" placeholder="Arrival Date and Time" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="datetime-local" class="form-control" placeholder="Departure Date and Time" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="License Plate Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-3" class="">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Card Number" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Cardholder Name" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mt-3">
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="CVV" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" placeholder="Mobile Phone Number" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="step-4" class="">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <span>Thank you for submitting your details to ParkGo.com. We will send you a confirmation email. We will review your details and get back to you.</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript' src='#'></script>
+<script type='text/javascript'></script>
+
+
+
 <!--parking status-->
+
+
+
+
+
+
+<!--Location status-->
+
+<section class="destinations">
+    <h4 class="label">Where you can find us </h4>
+    <div class="container">
+        <div class="container-box">
+            <h2 class="heading"></h2>
+            <div class="content">
+                <p>You can find our parking facilities in Rabat, Casablanca, and Marrakech, ensuring convenience and accessibility for our valued customers. We are excited to expand our presence and are actively exploring opportunities to serve you in even more cities. Our goal is to provide seamless experiences wherever you go, ensuring that parking is one less thing to worry about as you enjoy all that each city has to offer. Whether you're visiting for business or leisure, we look forward to welcoming you and making your parking experience hassle-free.</p>
+                <a href="#">explore more <i class="fa fa-arrow-right"></i></a>
+            </div>
+        </div>
+        <div class="gallery">
+            <div class="box box1">
+                <img src="/assets/image/destinations.webp" alt="">
+                <div class="text">
+                    <h2>Centre commercial Californie, Casablanca </h2>
+                </div>
+            </div>
+            <div class="box box2">
+                <img src="/assets/image/destinations-1.png" alt="">
+                <div class="text">
+                    <h2>2 Av. Mohamed VI, Rabat </h2>
+                </div>
+            </div>
+            <div class="box box3">
+                <img src="/assets/image/destinations-2.webp" alt="">
+                <div class="text">
+                    <h2>Bd Mohamed VI, Marrakech</h2>
+                </div>
+            </div>
+    </div>
+</section>
+
+
+
+
+
 
     <!--Feedback section -->
     <section class="feedback">
