@@ -278,9 +278,130 @@ section.home {
     color: #666;
 }
 
+/*--------------Reservation ----------------*/
+
+.btn.btn-purple {
+    color: #ffffff; /* Couleur du texte */
+    background-color: #800080; /* Couleur de fond */
+    border-color: #800080; /* Couleur de la bordure */
+}
+
+.btn.btn-purple:hover {
+    color: #ffffff;
+    background-color: #6a007d;
+    border-color: #6a007d;
+}
+
+/* Styling for SmartWizard steps */
+#smartwizard ul.nav > li > a.selected {
+    background-color: #800080 !important; /* Purple background for selected step */
+    color: #ffffff !important; /* White text color */
+    border-color: #800080 !important; /* Purple border color */
+}
+
+#smartwizard ul.nav > li > a.done {
+    background-color: #6a007d !important; /* Dark purple background for completed step */
+    color: #ffffff !important; /* White text color */
+    border-color: #6a007d !important; /* Dark purple border color */
+}
+
+/* Ensure text color is white for active and completed steps */
+#smartwizard ul.nav > li > a.selected,
+#smartwizard ul.nav > li > a.done {
+    color: #ffffff !important;
+}
+
+/* Update border color for active and completed steps */
+#smartwizard ul.nav > li > a.selected,
+#smartwizard ul.nav > li > a.done {
+    border-color: #800080 !important; /* Purple border color */
+}
+
+/* Handle on hover */
+#smartwizard ul.nav > li > a:hover {
+    background-color: #6a007d !important; /* Dark purple background on hover */
+    border-color: #6a007d !important; /* Dark purple border color on hover */
+}
+/* Couleur du texte des étapes */
+#smartwizard ul li a {
+    color: #ffffff;
+}
+
+/* Couleur de fond des étapes */
+#smartwizard ul li > a {
+    background-color: #800080; /* Modifier en #800080 */
+}
+
+/* Couleur de la bordure des étapes */
+#smartwizard ul li > a > small:before,
+#smartwizard ul li > a > small:after {
+    border-color: #800080; /* Modifier en #800080 */
+}
 
 
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
 
+
+.form-control:focus {
+    color: #495057;
+    background-color: rgb(255, 255, 255);
+    border-color: #6a007d;
+    outline: 0;
+    box-shadow: 0 0 0 0rem rgba(224, 15, 196, 0.603);
+}
+
+.btn-secondary:focus {
+    box-shadow: 0 0 0 0rem rgba(108, 117, 125, .5);
+}
+
+.close:focus {
+    box-shadow: 0 0 0 0rem rgba(228, 231, 235, 0.925);
+}
+
+.mt-400 {
+    border-radius: 20px;
+    margin-top: 50px;
+    background-color: #6a007d;
+}
+
+/* Styling for SmartWizard steps */
+#smartwizard ul.nav > li > a {
+    background-color: #800080 !important; /* Purple background for all steps */
+    color: #ffffff !important; /* White text color */
+    border-color: #800080 !important; /* Purple border color */
+}
+
+/* Ensure text color is white for all steps */
+#smartwizard ul.nav > li > a {
+    color: #ffffff !important;
+}
+
+/* Update border color for all steps */
+#smartwizard ul.nav > li > a {
+    border-color: #800080 !important; /* Purple border color */
+}
+
+/* Styling for selected and completed steps */
+#smartwizard ul.nav > li > a.selected,
+#smartwizard ul.nav > li > a.done {
+    background-color: #800080 !important; /* Purple background for selected and completed steps */
+    border-color: #800080 !important; /* Purple border color for selected and completed steps */
+}
+
+/* Ensure text color is white for selected and completed steps */
+#smartwizard ul.nav > li > a.selected,
+#smartwizard ul.nav > li > a.done {
+    color: #ffffff !important;
+}
+
+/* Update triangle color for selected and completed steps */
+#smartwizard ul.nav > li > a.selected:before,
+#smartwizard ul.nav > li > a.done:before {
+    border-color: transparent transparent #800080 transparent !important; /* Purple triangle color */
+}
 
 
 /*---------------- location ------------------*/
