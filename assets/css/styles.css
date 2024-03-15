@@ -244,6 +244,27 @@ section.home {
     align-items: center; 
     flex-direction: column;
 }
+
+
+
+/*---------------How  it works ------------- */
+#howItWorks {
+    display: none; 
+}
+.modal-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.modal.fade .modal-dialog {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.modal.fade.show .modal-dialog {
+    opacity: 1;
+}
 /* --------------- why us -----------------*/
 
 .whyus .container {
@@ -592,6 +613,19 @@ section.home {
     transform: translate(0, 100px);
     opacity: 0;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*---------------footer -------------*/
 
 footer {

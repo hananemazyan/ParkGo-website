@@ -36,7 +36,7 @@
                         <li><a href="#about">about</a></li>
                         <li><a href="#Reservation">reservation</a></li>
                         <li><a href="#">parking status </a></li>
-                        <li><a href="#">How it works</a></li>
+                        <li><a href="#howItWorksModal">How it works</a></li>
                     </ul>
                 </div>
                 <div class="signup-login">
@@ -58,25 +58,69 @@
             </div>
         </div>
     </section>
+    <!-- How it works -->
+    <div class="modal fade" id="howItWorksModal" tabindex="-1" role="dialog" aria-labelledby="howItWorksModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="howItWorksModalLabel">How It Works</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>1. Find your spot</p>
+                    <p>2. Second step explanation</p>
+                    <p>3. Park your vehicle</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- JavaScript to trigger the modal -->
+    <script>
+        $(document).ready(function() {
+            $('a[href="#howItWorksModal"]').click(function(e) {
+                e.preventDefault();
+                $('#howItWorksModal').modal('show');
+            });
+        });
+    </script>
+
+    <!-- JavaScript to trigger the modal -->
+    
+    <script>
+        $(document).ready(function() {
+            $('a[href="#howItWorksModal"]').click(function(e) {
+                e.preventDefault();
+                $('#howItWorksModal').modal('show');
+            });
+        });
+    </script>
     <!-- Why us section   -->
     <section class="whyus" id="about">
         <div class="container">
             <div class="box box1">
-                <img src="image/security1.webp" alt="">
+                <img src="/assets/image/security1.webp" alt="">
                 <div class="content">
                     <h4>Security</h4>
                     <p> Our parking service ensures the safety of your vehicle through advanced surveillance systems and secure access controls, providing peace of mind against theft</p>
                 </div>
             </div>
             <div class="box box2">
-                <img src="image/timesaving1.webp" alt="">
+                <img src="/assets/image/timesaving1.webp" alt="">
                 <div class="content">
                     <h4>Time-Saving</h4>
                     <p>With our smart parking system, users can quickly locate and reserve parking spots in advance, saving valuable time by eliminating the need to search for parking and reducing delays in finding a suitable spot</p>
                 </div>
             </div>
             <div class="box box3">
-                <img src="image/moneysaving1.webp" alt="">
+                <img src="/assets/image/moneysaving1.webp" alt="">
                 <div class="content">
                     <h4>Cost-Effective</h4>
                     <p>By offering transparent pricing, competitive rates, and convenient payment options, our parking service helps users save money on parking fees and avoid fines, providing an affordable and efficient parking solution</p>
