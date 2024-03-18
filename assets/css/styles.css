@@ -614,17 +614,52 @@ section.home {
     opacity: 0;
 }
 
+/*------------ Map ---------------*/
 
+/* Additional styles for office section */
+.office-location {
+    margin-left: rem;
+    padding-right: 1rem;
+    margin-top: 0.5rem;
 
+    background-color: var(--dark-green);
+    color: var(--white-color);
+    padding: 3rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: relative; /* Add position relative */
+    width: 100%; /* Ensure full width */
+    height: auto; /* Change height to auto */
+    overflow: hidden; /* Hide overflowing content */
+}
 
+.office-location h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
 
+.office-location p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
 
+/* Adjustments for responsiveness */
+@media screen and (max-width: 768px) {
+    .office-location {
+        margin-right: 2rem;
+        margin-left: 2rem;
+    }
+}
 
-
-
-
-
-
+/* Center the iframe */
+.office-location iframe {
+    max-width: 100%; /* Ensure iframe fits container width */
+    width: 600px; /* Set a specific width for the iframe */
+    height: 400px; /* Set an appropriate height for the iframe */
+    margin: 2rem auto; /* Center horizontally */
+    display: block; /* Ensure iframe behaves as a block element */
+    border: 0; /* Remove iframe border */
+}
 
 /*---------------footer -------------*/
 
