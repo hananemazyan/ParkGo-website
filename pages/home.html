@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> ParkGo | Find Your Spot</title>
-    <link rel="stylesheet" href="/assets/css/styles.csS">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!--reservation-->
     <link href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' rel='stylesheet'>
@@ -14,7 +14,11 @@
     <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard.min.css" rel="stylesheet" type="text/css" />
     <link href="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/smart_wizard_theme_arrows.min.css" rel="stylesheet" type="text/css" />
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/bbbootstrap/libraries@main/jquery.smartWizard.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .red { color: red; }
+        .green { color: green; }
+    </style>
 </head>
 <body>
     <!-- home section starts here  -->
@@ -34,14 +38,14 @@
                     <ul>
                         <li><a href="#home">home</a></li>
                         <li><a href="#about">about</a></li>
-                        <li><a href="#Reservation">reservation</a></li>
+                        <li><a href="#reservation">reservation</a></li>
                         <li><a href="#">parking status </a></li>
                         <li><a href="#howItWorksModal">How it works</a></li>
                     </ul>
                 </div>
                 <div class="signup-login">
                     <a href="#">sign up</a>
-                    <a href="#">login</a>
+                    <a href="/pages/login.html">login</a>
                 </div>
             </nav>
     
@@ -103,7 +107,7 @@
         });
     </script>
     <!-- Why us section   -->
-    <section class="whyus" id="about">
+    <section class="whyus" id="whyus">
         <div class="container">
             <div class="box box1">
                 <img src="/assets/image/security1.webp" alt="">
@@ -128,135 +132,221 @@
             </div>
         </div>
     </section>
-    
-    <!--reservation-->
-    <section class="Reservation" id="Reservation">
+
+    <!-- ***** Reservation Us Area Starts ***** -->
+    <section class="section" id="reservation">
         <div class="container">
-            <div class="row d-flex justify-content-center mt-3">
-                <button type="button" class="btn btn-purple" data-toggle="modal" data-target="#exampleModal">Book Now</button>
-            </div>
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Reservation</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            <div class="row">
+                <div class="col-lg-6 align-self-center">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>Contact Us</h6>
+                            <h2>Here You Can Make A Reservation Or Just walkin to our Parking</h2>
                         </div>
-                        <div class="modal-body">
-                            <div id="smartwizard">
-                                <ul>
-                                    <li>
-                                        <a href="#step-1">Step 1
-                                            <br />
-                                            <small>Account Information</small>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#step-2">Step 2
-                                            <br />
-                                            <small>Personal Information</small>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#step-3">Step 3
-                                            <br />
-                                            <small>Payment Information</small>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#step-4">Step 4
-                                            <br />
-                                            <small>Confirm Details</small>
-                                        </a>
-                                    </li>
-                                </ul>
-                                <div class="mt-4">
-                                    <div id="step-1">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Name" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="email" class="form-control" placeholder="Email" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Password" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="password" class="form-control" placeholder="Confirm Password" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="step-2">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <select class="form-control" required>
-                                                    <option value="">Where do you want to park?</option>
-                                                    <option value="ousis">Ousis</option>
-                                                    <option value="maarif">Maarif</option>
-                                                    <option value="bourgone">Bourgone</option>
-                                                </select>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="datetime-local" class="form-control" placeholder="Arrival Date and Time" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6">
-                                                <input type="datetime-local" class="form-control" placeholder="Departure Date and Time" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="License Plate Number" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="step-3" class="">
-                                        <div class="row">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Card Number" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Cardholder Name" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mt-3">
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="CVV" required>
-                                            </div>
-                                            <div class="col-md-6">
-                                                <input type="text" class="form-control" placeholder="Mobile Phone Number" required>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div id="step-4" class="">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <span>Thank you for submitting your details to ParkGo.com. We will send you a confirmation email. We will review your details and get back to you.</span>
+                        <p> Do you have any questions, suggestions, or need assistance? Feel free to contact us! Our dedicated team is here to help you, whether it's for information about our services, partnership inquiries, or any other matter. Use the form below to reserve your spot or contact us directly by phone or email. We look forward to helping you make the most of our smart parking service.
+                        </p>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="phone">
+                                    <i class="fa fa-phone"></i>
+                                    <h4>Phone Numbers</h4>
+                                    <span><a href="#">080-090-0990</a><br><a href="#">080-090-0880</a></span>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="message">
+                                    <i class="fa fa-envelope"></i>
+                                    <h4>Emails</h4>
+                                    <span><a href="#">ParkGO@Gmail.com</a><br><a href="#">ParkGo@Gmail.com</a></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form">
+                        <form id="contact" action="" method="post">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <h4>Parking Reservation</h4>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="name" type="text" id="name" placeholder="Your Name*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="Your Email Address" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6 col-sm-12">
+                                    <fieldset>
+                                        <input name="phone" type="text" id="phone" placeholder="Phone Number*" required="">
+                                    </fieldset>
+                                </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <fieldset>
+                                        <select value="number-guests" name="number-guests" id="number-guests">
+                                            <option value="number-guests">Number Of Spots</option>
+                                            <option name="1" id="1">1</option>
+                                            <option name="2" id="2">2</option>
+                                            <option name="3" id="3">3</option>
+                                            <option name="4" id="4">4</option>
+                                            <option name="5" id="5">5</option>
+                                            <option name="6" id="6">6</option>
+                                            <option name="7" id="7">7</option>
+                                            <option name="8" id="8">8</option>
+
+                                        </select>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div id="filterDate2">
+                                        <div class="input-group date" data-date-format="dd/mm/yyyy">
+                                            <input  name="date" id="date" type="date" class="form-control" placeholder="dd/mm/yyyy">
+                                            <div class="input-group-addon" >
+                                                <span class="glyphicon glyphicon-th"></span>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <div class="col-md-6 col-sm-12">
+                                    <div id="filterTime">
+                                        <div class="input-group date" data-time-format="hh:mm:ss">
+                                            <input name="time" id="time" type="time" class="form-control" placeholder="">
+                                            <div class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <textarea name="message" rows="6" id="message" placeholder="Message" required=""></textarea>
+                                    </fieldset>
+                                </div>
+                                <div class="col-lg-12">
+                                    <fieldset>
+                                        <button type="submit" id="form-submit" class="main-button-icon">Make A Reservation</button>
+                                    </fieldset>
+                                </div>
                             </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ***** Reservation Area Ends ***** -->
+    <!-- ***** About Area Starts ***** -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="left-text-content">
+                        <div class="section-heading">
+                            <h6>About Us</h6>
+                            <h2>Our Journey in Creating a Smart Parking Solution</h2>
+                        </div>
+                        <p>Our smart parking project was carried out by female students pursuing a bachelor's degree in systems information and digital transformation. We leveraged our expertise and passion for innovation to create a modern and efficient parking solution. Our goal is to provide a quality service that simplifies the lives of our users while contributing to smarter parking space management. We take pride in our work and are committed to continuously improving and developing our solution to meet the changing needs of our customers.</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-xs-12">
+                    <div class="right-content">
+                        <div class="thumb">
+                            <img src="/assets/image/AboutUs2.jpg" alt="">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- ***** About Area Ends ***** -->
+    <!-- Start Team Member -->
+    <section class="container py-5">
+        <div class="pt-5 pb-3 d-lg-flex align-items-center gx-5">
+
+            <div class="col-lg-3">
+                <h2 class="h2 py-5 typo-space-line">Our Team</h2>
+                <p class="text-muted light-300">
+                    "Each member of our team brings their own expertise and creativity to our smart parking project. We are proud to share our solution with you and look forward to continuing to evolve our project to meet the needs of our customers."
+                </p>
+            </div>
+
+            <div class="col-lg-9 row">
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Ikram.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Aziz Ikram </li>
+                        <li>Business Development</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Marwa (2).jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Jaida Marwa</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Hanan.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Mazyan Hanane</li>
+                        <li>Developer</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Wissal.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Hidaoui Wissal</li>
+                        <li>IT Developper</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Chaimae.jpeg" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Moudnib Chaymae</li>
+                        <li>Data Engineer</li>
+                    </ul>
+                </div>
+
+                <div class="team-member col-md-4">
+                    <img class="team-member-img img-fluid rounded-circle p-4" src="/assets/image/Fsts.png" alt="Card image">
+                    <ul class="team-member-caption list-unstyled text-center pt-4 text-muted light-300">
+                        <li>Tahiry Karim</li>
+                        <li>Research Professor at the Faculty of Science and Technology in Settat</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Team Member -->
     
-    <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js'></script>
-    <script type='text/javascript'></script>
-    
-
-<!--parking status-->
-
-
-
-
+    <!--parking status-->
+    <title>Smart Parking</title>
+    <h1>Smart Parking Status</h1>
+    <table>
+        <thead>
+          <tr>
+            <th>Place Number</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>1</td><td id="spot1" class="status"></td></tr>
+          <tr><td>2</td><td id="spot2" class="status"></td></tr>
+          <tr><td>3</td><td id="spot3" class="status"></td></tr>
+          <tr><td>4</td><td id="spot4" class="status"></td></tr>
+          <tr><td>5</td><td id="spot5" class="status"></td></tr>
+          <tr><td>6</td><td id="spot6" class="status"></td></tr>
+        </tbody>
+      </table>
 
 
 <!--Location status-->
@@ -290,6 +380,7 @@
                     <h2>Bd Mohamed VI, Marrakech</h2>
                 </div>
             </div>
+    </div>
     </div>
 </section>
 
@@ -370,8 +461,7 @@
         <p>Address: 12 Avenue Hassan II , Casablanca , Casablanca-Settat , Morocco</p>
         <p>Phone: +212 756 7890</p>
         <p>Email: Park@Go.com</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d385968.7116544659!2d-74.25987583013222!3d40.697670005934864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2sin!4v1647454886740!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13379.879326921591!2d-7.626804745229195!3d33.03092526665025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda61aabf2a6a8b9%3A0xe6a579c28d993de9!2sFacult%C3%A9%20des%20sciences%20et%20techniques!5e0!3m2!1sen!2sin!4v1710730239139!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
     <!--Footer -->
     <footer>

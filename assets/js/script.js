@@ -109,18 +109,22 @@ galleryAnimation(".destinations .gallery", [".destinations .gallery .box1",".des
 galleryAnimation(".featured .gallery", [".featured .gallery .box1",".featured .gallery .box2",".featured .gallery .box3",".featured .gallery .box4"])
 
 
+//reservation
 $(document).ready(function(){
-
     $('#smartwizard').smartWizard({
-      selected: 0,
-      theme: 'arrows',
-      autoAdjustHeight:true,
-      transitionEffect:'fade',
-      showStepURLhash: false,
+        selected: 0,
+        theme: 'arrows',
+        autoAdjustHeight:true,
+        transitionEffect:'fade',
+        showStepURLhash: false,
+    });
 
+    var myLink = document.querySelector('a[href="#"]');
+    myLink.addEventListener('click', function(e) {
+        e.preventDefault();
+    });
 });
 
-});
                   var myLink = document.querySelector('a[href="#"]');
                   myLink.addEventListener('click', function(e) {
                     e.preventDefault();
